@@ -1,0 +1,397 @@
+﻿/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.container-image {
+    
+    background-image: url('/images/main background.jpg');
+    position: relative;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ff6a00;
+    padding: 10px 10px;
+}
+
+
+.container1 {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+    align-items: center;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+   
+    justify-content: center;
+}
+
+.container-nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0px 00px 30px 0px;
+    background-image: linear-gradient(#ff6a00, white);
+    justify-content: center;
+    transition: top 0.3s;
+}
+
+
+.container {
+    position: relative;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin: auto;
+    margin-bottom: 55px;
+    margin-top: 55px;
+    border: 1px solid #ff6a00;
+    padding: 20px 20px;
+}
+.container form {
+    position: relative;
+    margin-top: 16px;
+    min-height:  430px;
+    background-color: #fff;
+    overflow: hidden;
+    height:fit-content;
+    justify-content:center;
+    text-align:center;
+}
+
+    .container form .form {
+        position: absolute;
+        background-color: #fff;
+        transition: 0.3s ease;
+    }
+
+       
+
+
+form.secActive .form.first {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.container form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .fields .input-field {
+    display: flex;
+    width: calc(100% / 4 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input, select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+    .input-field input :focus,
+    .input-field select:focus {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+    }
+
+    .input-field select,
+    .input-field input[type="time"] {
+        color: #707070;
+    }
+
+        .input-field input[type="time"]:valid {
+            color: #333;
+        }
+
+.container form button, .backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+   
+    background-color: black;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.container form .btnText {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover {
+    background-color: #265df2;
+}
+
+form button i,
+form .backBtn i {
+    margin: 0 6px;
+}
+
+form .backBtn i {
+    transform: rotate(180deg);
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+
+    form .buttons button, .backBtn {
+        margin-right: 14px;
+    }
+
+@media (max-width: 750px) {
+    .container form {
+        overflow-y: scroll;
+    }
+
+        .container form::-webkit-scrollbar {
+            display: none;
+        }
+
+    form .fields .input-field {
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field {
+        width: 100%;
+    }
+}
+
+/****Navigation Start****/
+.topnav {
+    overflow: hidden;
+    
+}
+
+.topnav-right {
+    float: right;
+}
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .topnav a:hover {
+            background-color: #ff6a01;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #ff6a01;
+            color: white;
+        }
+
+    .topnav .icon {
+        display: none;
+    }
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+}
+
+/****Navigation End****/
+
+.header {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 10px 10px;
+}
+.header1 {
+    background-color:#fff;
+    border: black;
+    display: block;
+    box-sizing: border-box;
+    padding-top:10px;
+}
+
+    .header1 ul {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .header1 > ul > li {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        width: 30%;
+    }
+
+#lodestone {
+    
+    text-align:center;
+    color:black;
+}
+
+#user {
+    text-align: center;
+    color: black;
+}
+
+#mogstation {
+    text-align: center;
+    color: black;
+}
+.info {
+    background-color: black;
+    color: #333;
+    text-align: center;
+    color: white;
+    padding: 0px;
+}
+.info1 {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    color: black;
+    padding: 0px;
+}
+
+footer {
+    background-image: linear-gradient(#ff6a00, white);
+    
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ccc; /* Add border between main content and footer */
+}
+
+.main-content {
+    text-align: center;
+    padding: 20px;
+    flex: 1; /* Fill remaining space in the body */
+    border-top: 2px solid #ccc; /* Add border between navigation and main content */
+    border-bottom: 2px solid #ccc; /* Add border between main content and footer */
+    width: auto;
+    height: 100%;
+    min-height: 50vh;
+    opacity: 0.8;
+}
+
+p {
+    text-indent: 50px;
+    text-align: center;
+    color: black;
+}
+h3 {
+    text-align:center;
+    color:black;
+}
+
+a {
+    text-decoration: none;
+    color: #008CBA;
+}
+.parallax {
+    /* The image used */
+    
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+}
+/* The grid container */

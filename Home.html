@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgwpafa7E64dJX_qzG_018wlxrIsSMipo&libraries=places"></script>
+    <title>Tabbed Form</title>
+    <style>
+        /* General Styles */
+        .container {
+            max-width: 100%;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .tabs {
+            overflow: hidden;
+        }
+
+        .tablinks {
+            background-color: #f2f2f2;
+            float: left;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+            .tablinks:hover,
+            .tablinks.active {
+                background-color: #ddd;
+            }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+        }
+
+            .tabcontent h2 {
+                margin-bottom: 20px;
+            }
+
+            .tabcontent input[type="text"],
+            .tabcontent input[type="number"],
+            .tabcontent input[type="email"],
+            .tabcontent input[type="tel"],
+            .tabcontent input[type="date"],
+            .tabcontent input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .tabcontent input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+
+                .tabcontent input[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .tablinks {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tablinks active" onclick="openTab(event, 'booking')">Book a Cab</button>
+            <button class="tablinks" onclick="openTab(event, 'personal')">Personal Info</button>
+            <button class="tablinks" onclick="openTab(event, 'contact')">Contact Info</button>
+            <button class="tablinks" onclick="openTab(event, 'address')">Address Info</button>
+        </div>
+
+        <div id="booking" class="tabcontent" style="display: block;">
+            <h2>Cab Booking</h2>
+            <form>
+                <label for="leadpassenger">Lead Passenger Name:</label>
+                <input type="text" id="leadpassenger" name="leadpassenger" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Mobile Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="pickup">Pickup Location or Postcode:</label>
+                <input type="text" id="pickup" name="pickup" required autocomplete="on">
+
+                <label for="destination">Destination Location or Postcode:</label>
+                <input type="text" id="destination" name="destination" required autocomplete="on">
+
+                <label for="oneway">One-way or Return?</label>
+                <select id="oneway" name="oneway" required>
+                    <option value="oneway">One-way</option>
+                    <option value="return">Return</option>
+                </select>
+
+                <label for="luggage">Will you have luggage?</label>
+                <select id="luggage" name="luggage" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="smallbags">Number of Small Bags:</label>
+                <input type="number" id="smallbags" name="smallbags" min="0" required>
+
+                <label for="largebags">Number of Large Bags:</label>
+                <input type="number" id="largebags" name="largebags" min="0" required>
+
+                <label for="outwarddate">Outward Travel Date:</label>
+                <input type="date" id="outwarddate" name="outwarddate" required>
+
+                <label for="outwardtime">Outward Travel Time:</label>
+                <input type="time" id="outwardtime" name="outwardtime" required>
+
+                <label for="returndate">Return Travel Date:</label>
+                <input type="date" id="returndate" name="returndate">
+
+                <label for="returntime">Return Travel Time:</label>
+                <input type="time" id="returntime" name="returntime">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Other tabs and content -->
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <script>
+        function initAutocomplete() {
+            var pickupInput = document.getElementById('pickup');
+            var destinationInput = document.getElementById('destination');
+
+            var autocompletePickup = new google.maps.places.Autocomplete(pickupInput);
+            var autocompleteDestination = new google.maps.places.Autocomplete(destinationInput);
+        }
+        google.maps.event.addDomListener(window, 'load', initAutocomplete);
+    </script>
+</body>
+</html>

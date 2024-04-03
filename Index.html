@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK MiniBuses</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="StyleSheet2.css" rel="stylesheet" />
+    <link href="review.css" rel="stylesheet" />
+    <link href="chat.css" rel="stylesheet" />
+    <link href="table.css" rel="stylesheet" />
+    <link href="js/script.js" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgwpafa7E64dJX_qzG_018wlxrIsSMipo&libraries=places"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="info">
+            Info: info@ukminibusestravel.co.uk | Book Now : 0161 222 6446
+        </div>
+    </header>
+    <div class="header1">
+        <ul class="child">
+            <li id="lodestone"><a href="Index.html" class="logo"><img src="images/logo.png" /></a></li>
+            <li id="mogstation"><h4> Hire MiniBus, Car for Corportae, Family, Friend in UK </h4></li>
+            <li id="user"><h4> Airport Transfers Racecourse</h4> <h4>and Leisure Trips</h4></li>
+        </ul>
+
+    </div>
+
+    <div class="container-nav">
+        <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
+
+                <div class="topnav-right">
+                    <a href="/Index.html" class="active">HOME</a>
+                    <a href="#news">ABOUTUS</a>
+                    <a href="/AirportTranfer.html">AIRPORT TRANSFERS</a>
+                    <a href="#about">TOURISM</a>
+                    <a href="#about">COMMUNITY AND SOCIAL</a>
+                    <a href="#about">CONTACT US</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="main-content">
+        <section class="main-section">
+
+            <div class="parallax" style="background-image: url('/images/Image_20240112_214733_6644154.jpg');">
+                <div class="container">
+                    <div class="tab">
+                        <button class="tablinks active" onclick="openCity(event, 'London')">Airport/Local Travel</button>
+                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Hourly Travel</button>
+                    </div>
+                    <div id="London" class="tabcontent">
+                        <form action="#">
+                            <div class="form first">
+                                <div class="details personal">
+                                    <span class="title">Book For Airport/Local Travel</span>
+
+                                    <div class="fields">
+                                        <div class="input-field">
+                                            <label>Full Name</label>
+                                            <input type="text" placeholder="Enter your name" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Email</label>
+                                            <input type="text" placeholder="Enter your email" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Mobile Number</label>
+                                            <input type="number" placeholder="Enter mobile number" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Number of Passenger</label>
+                                            <input type="text" placeholder="Number of Passenger" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Pickup Location or Postcode*</label>
+                                            <input type="text" id="pickup" name="pickup" placeholder="Enter Pickup Location" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Destination Location or Postcode*</label>
+                                            <input type="text" id="destination" name="destination" placeholder="Enter Destination Location" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Travel Date</label>
+                                            <input type="Date" placeholder="Enter Travel time" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Travel Time</label>
+                                            <input type="time" placeholder="Enter Travel Time" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>One-Way or Return</label>
+                                            <select id="TravelType" onchange="Div()">
+                                                <option value="No">One-Way</option>
+                                                <option value="Yes">Return</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field" style="display: none;" id="DateType">
+                                            <label>Return Travel Date</label>
+                                            <input type="Date" placeholder="Enter Travel time">
+                                        </div>
+
+                                        <div class="input-field" style="display: none;" id="TimeType">
+                                            <label>Return Travel Time</label>
+                                            <input type="time" placeholder="Enter Travel Time">
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Do You have Luggage ?</label>
+                                            <select id="LuggageType" onchange="Div1()">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field" id="LargeBag">
+                                            <label>Number of Large Baggage</label>
+                                            <input type="number" placeholder="Enter Number of Bag" required>
+                                        </div>
+
+                                        <div class="input-field" id="SmallBag">
+                                            <label>Number of Small Baggage</label>
+                                            <input type="number" placeholder="Enter Number of Bag" required>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                                <button>
+                                    <span>Book Now</span>
+                                </button>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                    <div id="Tokyo" class="tabcontent">
+                        <form action="#">
+                            <div class="form first">
+                                <div class="details personal">
+                                    <span class="title">Book For Hourly Local Travel</span>
+
+                                    <div class="fields">
+                                        <div class="input-field">
+                                            <label>Full Name</label>
+                                            <input type="text" placeholder="Enter your name" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Email</label>
+                                            <input type="text" placeholder="Enter your email" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Mobile Number</label>
+                                            <input type="number" placeholder="Enter mobile number" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Number of Passenger</label>
+                                            <input type="text" placeholder="Number of Passenger" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Pickup Location or Postcode*</label>
+                                            <input type="text" id="pickup" name="pickup" placeholder="Enter Pickup Location" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Destination Location or Postcode*</label>
+                                            <input type="text" id="destination" name="destination" placeholder="Enter Destination Location" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Travel Date</label>
+                                            <input type="Date" placeholder="Enter Travel time" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Travel Time</label>
+                                            <input type="time" placeholder="Enter Travel Time" required>
+                                        </div>
+
+
+
+
+                                        <div class="input-field">
+                                            <label>Number of Hours</label>
+                                            <select>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Do You have Luggage ?</label>
+                                            <select id="LuggageType" onchange="Div1()">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field" id="LargeBag">
+                                            <label>Number of Large Baggage</label>
+                                            <input type="number" placeholder="Enter Number of Bag" required>
+                                        </div>
+
+                                        <div class="input-field" id="SmallBag">
+                                            <label>Number of Small Baggage</label>
+                                            <input type="number" placeholder="Enter Number of Bag" required>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                                <button class="nextBtn">
+                                    <span class="btnText">Book Now</span>
+                                    <i class="uil uil-navigator"></i>
+                                </button>
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Main content goes here -->
+        </section>
+
+
+        <div class="container4">
+            <div class="image">
+                <div class="polaroid">
+                    <img src="/images/great-britain-map-2.jpg" class="responsive">
+                </div>
+            </div>
+            <div class="text">
+                <h1>Travel in Comfort - Sedans to Coach Buses.</h1>
+                <h5>At UK Mini Buses Travel we pride ourselves in delivering extensive services to fulfill all of your needs with first rate customer care. Our goal is to make your travels safe, effortless and on schedule.</h5>
+                <h5>By offering exceptional service with no detail unattended, we have been fortunate enough to have developed into the leading provider of ground transportation in the area.</h5>
+            </div>
+        </div>
+        <div>
+            <h3>With over 120 different vehicles we are sure to have a ride to fit your needs. We get you where you want to go, when you want to go and in the type of vehicle best suited to you.</h3>
+            <div class="container-counter">
+                <div class="image">
+                    <div class="polaroid">
+                        <div class="card">
+                            <i class="fa fa-car"></i>
+                            <h3>Vehicles</h3>
+                            <p class="counter" id="vehicleCount">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="polaroid">
+                        <div class="card">
+                            <i class="fa fa-trophy"></i>
+                            <h3>Awards</h3>
+                            <p class="counter" id="awardCount">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container5">
+            <div class="row">
+                <div class="column">
+                    <div class="image">
+                        <div class="polaroid">
+                            <img src="/images/8-seat.jpg" alt="Snow" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <div class="polaroid">
+                            <img src="/images/12-seater-wedding-bus-hire-milton-keynes.jpg" alt="Forest" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <div class="polaroid">
+                            <img src="/images/16-Seater-McB.png" alt="Mountains" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <div class="polaroid">
+                            <img src="/images/nishan1.jpg" alt="Mountains" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <div class="polaroid">
+                            <img src="/images/mcd1.jpg" alt="Mountains" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <div class="polaroid">
+                            <img src="/images/lemo.jpg" alt="Mountains" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <h2 style="text-decoration: underline;">Top 20 Tourist City in UK</h2>
+            <table>
+                <thead>
+                    
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>London</td>
+                        <td>Edinburgh</td>
+                        <td>Manchester</td>
+                        <td>Birmingham</td>
+                        <td>Glasgow</td>
+                        <td>Liverpool</td>
+                        <td>Bristol</td>
+                        <td>Oxford</td>
+                        <td>Cambridge</td>
+                        <td>Bath</td>
+                    </tr>
+                    <tr>
+                        <td>York</td>
+                        <td>Brighton</td>
+                        <td>Cardiff</td>
+                        <td>Belfast</td>
+                        <td>Leeds</td>
+                        <td>Newcastle</td>
+                        <td>Nottingham</td>
+                        <td>Sheffield</td>
+                        <td>Southampton</td>
+                        <td>Inverness</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="width: auto; margin: 50px; background-color: #ff6a00; padding: 20px; background-image: linear-gradient(#ff6a00, white); ">
+
+            <h2>If you have any questions please <a href="contactus.html">contact us</a>. We're here to help you to manage your Travel</h2>
+
+
+        </div>
+
+
+
+    </main>
+    <section class="main1">
+        <h2> Customer Review </h2>
+        <div class="full-boxer">
+            <div class="comment-box">
+                <div class="box-top">
+                    <div class="Profile">
+                        <div class="profile-image">
+                            <img src="images/p1.jpg">
+                        </div>
+                        <div class="Name">
+                            <strong>Ranidi Lochana</strong>
+                            <p>Cambridge</p>
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span> <!-- Change to &#9734; if it's an empty star -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        UKMinibusesTravel provided a seamless journey with prompt, professional service and impeccable attention to detail. From booking to arrival, they exceeded expectations, making our trip a breeze
+                    </p>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <div class="box-top">
+                    <div class="Profile">
+                        <div class="profile-image">
+                            <img src="images/p2.jpg">
+                        </div>
+                        <div class="Name">
+                            <strong>Senuda Dilwan</strong>
+                            <p>Leeds</p>
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span> <!-- Change to &#9734; if it's an empty star -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        From booking to arrival, UK Minibuses Travel ensured a flawless journey, delivering prompt, top-notch service and meticulous attention to detail. Their professionalism and efficiency surpassed our expectations, making our trip hassle-free and enjoyable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <div class="box-top">
+                    <div class="Profile">
+                        <div class="profile-image">
+                            <img src="images/p3.jpg">
+                        </div>
+                        <div class="Name">
+                            <strong>Rumali fernando</strong>
+                            <p>Manchester</p>
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span> <!-- Change to &#9734; if it's an empty star -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Orchestrated a seamless travel experience on our trip from London to Manchester, with swift, first-rate service and meticulous attention to detail from start to finish. Their professionalism and efficiency exceeded expectations, making our journey effortless and delightful.
+                    </p>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <div class="box-top">
+                    <div class="Profile">
+                        <div class="profile-image">
+                            <img src="images/p4.jpg">
+                        </div>
+                        <div class="Name">
+                            <strong>Midinu Thiranjana</strong>
+                            <p>London</p>
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span> <!-- Change to &#9734; if it's an empty star -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Expertly coordinated a smooth, cost-effective journey from London airport to Liverpool, delivering dependable service and meticulous attention to detail that surpassed all expectations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="column-container">
+        <div class="column">
+            <h3>ADDRESS</h3>
+
+            <h4>249 Ordsall Lane  Salford  M5 3WH</h4>
+            <!-- Content for column 1 goes here -->
+        </div>
+        <div class="column">
+            <h3>PHONES</h3>
+            <h4>0161 222 6446</h4>
+            <!-- Content for column 2 goes here -->
+        </div>
+        <div class="column">
+            <h3>AVAILABILITY</h3>
+            <h4> 24 * 7</h4>
+            <!-- Content for column 3 goes here -->
+        </div>
+    </div>
+
+    <div class="column-container">
+        <div class="column">
+            <h3>ABOUT</h3>
+
+            <h4 style="text-align: left;">Group trips with either family or friends are always fun to plan and go on, regardless of the duration of your journey selecting a suitable and trustworthy company to partner with is important to ensure a comfortable and safe trip for all.</h4>
+            <!-- Content for column 1 goes here -->
+        </div>
+        <div class="column">
+            <h3>OUR SERVICES</h3>
+            <h4 style="text-align: left;"><i class="fas fa-route icon-text light"></i> Experiential Tours</h4>
+            <h4 style="text-align: left;"><i class="fas fa-ring icon-text light"></i> Wedding Limousine</h4>
+            <h4 style="text-align: left;"><i class="fas fa-briefcase icon-text light"></i> Corporate Travel</h4>
+            <h4 style="text-align: left;"><i class="fas fa-glass-cheers icon-text light"></i> Special Events</h4>
+            <h4 style="text-align: left;"><i class="fas fa-plane-departure icon-text light"></i> Airport Transportation</h4>
+            <h4 style="text-align: left;"><i class="fas fa-globe icon-text light"></i> Nationwide Transportation</h4>
+            <h4 style="text-align: left;"><i class="fas fa-wheelchair icon-text light"></i> Handicap Transportation</h4>
+
+            <!-- Content for column 2 goes here -->
+        </div>
+        <div class="column">
+            <h3>UK MINBUSES TRAVEL</h3>
+            <div class="#">
+                <h4 style="text-align: left;"><i class="fas fa-building light icon-text"></i><span>249 Ordsall Lane Salford M5 3WH</span></h4>
+                <h4 style="text-align: left;"><i class="fas fa-phone light icon-text"></i><span>0161 222 6446</span></h4>
+                <h4 style="text-align: left;"><i class="fas fa-envelope light icon-text"></i><span>info@ukminibusestravel.co.uk</span></h4>
+                <h4 style="text-align: left;"><i class="fas fa-clock light icon-text"></i><span>Available 24*7</span></h4>
+                <h4 style="text-align: left;"><i class="fas fa-power-off light icon-text"></i><span>Sunday: Closed</span></h4>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>LATEST POSTS</h3>
+            <h4>news will come </h4>
+            <!-- Content for column 3 goes here -->
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; Copyright 2023 UK Minibuses Travel </p>
+        <p><a href="#">Terms and Conditions</a>  <a href="#">Privacy Policy</a></p>
+    </footer>
+    <button class="open-button" onclick="openForm()">Message Us</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h2>Message</h2>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="contact"><b>Contact</b></label>
+            <input type="text" placeholder="Enter Contact Number" name="contact" required>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script>
+        function initAutocomplete() {
+            var pickupInput = document.getElementById('pickup');
+            var destinationInput = document.getElementById('destination');
+
+            var autocompletePickup = new google.maps.places.Autocomplete(pickupInput);
+            var autocompleteDestination = new google.maps.places.Autocomplete(destinationInput);
+        }
+        google.maps.event.addDomListener(window, 'load', initAutocomplete);
+    </script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+        document.querySelector(".tablinks.active").click();
+    </script>
+    <script>
+        function Div() {
+            var TravelType = document.getElementById("TravelType");
+            var DateType = document.getElementById("DateType");
+            var TimeType = document.getElementById("TimeType");
+
+            if (TravelType.value === "Yes") {
+                DateType.style.display = "block";
+                TimeType.style.display = "block";
+            } else {
+                DateType.style.display = "none";
+                TimeType.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function Div1() {
+            var LuggageType = document.getElementById("LuggageType");
+            var LargeBag = document.getElementById("LargeBag");
+            var SmallBag = document.getElementById("SmallBag");
+
+            if (LuggageType.value === "Yes") {
+                LargeBag.style.display = "block";
+                SmallBag.style.display = "block";
+            } else {
+                LargeBag.style.display = "none";
+                SmallBag.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        let vehicleCounter = 1;
+        let awardCounter = 1;
+
+        function updateVehicleCount() {
+            document.getElementById("vehicleCount").innerText = vehicleCounter;
+        }
+
+        function updateAwardCount() {
+            document.getElementById("awardCount").innerText = awardCounter;
+        }
+
+        window.onload = function () {
+            const startTime = Date.now();
+            const endTime = startTime + 6000; // 6 seconds
+
+            const interval = setInterval(function () {
+                const currentTime = Date.now();
+                const elapsedTime = currentTime - startTime;
+
+                if (elapsedTime >= 6000) {
+                    clearInterval(interval);
+                } else {
+                    const progress = elapsedTime / 5000;
+                    vehicleCounter = Math.min(Math.floor(progress * 120), 120);
+                    awardCounter = Math.min(Math.floor(progress * 25), 25);
+                    updateVehicleCount();
+                    updateAwardCount();
+                }
+            }, 80); // Update every 50 milliseconds
+        };
+    </script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+
+</body>
+
+</html>
